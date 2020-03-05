@@ -1,0 +1,35 @@
+// -----UPUTSTVA ZA EXPORT I IMPORT Mongo BAZE PODATAKA-----
+
+
+/*
+- CMD mora da bude startovan kao administrator
+- u CMD mora da se udje u folder: C:\Program Files\MongoDB\Server\4.2\bin
+jer se tu nalazi mongoexport.exe
+
+- Svaka kolekcija se eksportuje jedna po jedna i dbija se jedan .json fajl
+- koristite dole navedene komande za export
+- parametar --collection=NAZIV_KOLEKCIJE definise ime kolekcije koja se eksportuje 
+a --out=NAZIVEXPORTOVANOGFAJLA.json definise fajl koji ce se formirati prilikom exportovanja kolekcija.
+- fajlovi ce se prilikom eksportovanja stvoriti u folderu C:\Program Files\MongoDB\Server\4.2\bin
+
+- VISE UPUTSTVA za export collections-a na: https://docs.mongodb.com/manual/reference/program/mongoexport/
+
+*/
+
+
+
+// nasa mongo baza:
+
+mongodb+srv://cala:uVnAOp3WoVwQUkIb@cluster0-xgybx.mongodb.net/tours-app?retryWrites=true&w=majority
+
+
+// KOMANDE ZA EXPORT KOLEKCIJA:
+
+mongoexport --uri="mongodb+srv://cala:uVnAOp3WoVwQUkIb@cluster0-xgybx.mongodb.net/tours-app?retryWrites=true&w=majority" --collection=tours --out=tours.json
+
+mongoexport --uri="mongodb+srv://cala:uVnAOp3WoVwQUkIb@cluster0-xgybx.mongodb.net/tours-app?retryWrites=true&w=majority" --collection=users --out=users.json
+
+mongoexport --uri="mongodb+srv://cala:uVnAOp3WoVwQUkIb@cluster0-xgybx.mongodb.net/tours-app?retryWrites=true&w=majority" --collection=reviews --out=reviews.json
+
+
+
